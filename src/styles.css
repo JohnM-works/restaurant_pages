@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*;*/
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("assets/FilipinoFood.jpg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* styles of the Home Page */
+.container {
+  animation: fade-up 0.6s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.left-content {
+  /*display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-width: 400px;
+    width: 100%;
+    */
+  flex: 1;
+  min-width: 400px;
+  width: 100vw;
+  margin: 0 9% 0 9%;
+}
+
+.right-content {
+  /*display: flex;
+    justify-content: space-between;
+    height: 100%;
+    */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  margin: 0 9% 0 9%;
+  margin-top: 100px;
+}
+
+.image-content {
+  height: 600px;
+  width: 600px;
+  min-width: 400px;
+  min-height: 400px;
+  animation: floating 7s ease-in-out infinite;
+}
+
+.content-paragraph {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.content-title {
+  color: #b59460;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.content-button {
+  border: none;
+  background-color: #b59460;
+  border-radius: 30px;
+
+  margin-top: 30px;
+  padding: 20px 30px 20px 30px;
+
+  font-size: 1.2rem;
+  color: whitesmoke;
+}
+
+.content-button:hover {
+  background-color: #d89832;
+  cursor: pointer;
+}
+
+/* Styles of the About Page */
+
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.background-image {
+  flex: 1;
+  min-width: 300px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.about-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1;
+  background-color: aliceblue;
+  width: 100%;
+  height: 100vh;
+  min-width: 300px;
+  padding: 50px;
+}
+
+.title-content {
+  line-height: 1.6;
+  color: #b59460;
+  margin-bottom: 10px;
+}
+
+.paragraph-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Styles for forms */
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.input-row .input-email {
+  flex: 1;
+  min-width: 200px;
+}
+
+.input-row .input-phone-number {
+  flex: 1;
+  min-width: 200px;
+}
+
+input,
+textarea {
+  border: 1px solid #b59460;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  resize: none;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-wrapper .form-button {
+  background-color: #a57c3f;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-wrapper .form-button:hover {
+  background-color: #d89832;
+}
+
+/* Styles of the Nav Bar */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 9%;
+  width: 100%;
+  border-bottom: 2px solid #d89832;
+}
+
+.nav-logo img {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+/* header button */
+
+#menu-button,
+#home-button,
+#about-button {
+  margin: 15px;
+  color: whitesmoke;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  transition-duration: 0.4s;
+}
+
+#menu-button:hover,
+#home-button:hover,
+#about-button:hover {
+  color: #b59460;
+}
+
+/* Styles of the Menu Page*/
+.menu-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fffefc;
+  border: 8px double #b58b48;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 80vw;
+}
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.menu-title h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin: 0;
+  color: #a57c3f;
+}
+.menu-title p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+.menu-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b58b48;
+}
+.menu-sections {
+  margin-bottom: 35px;
+}
+.menu-sections h2 {
+  font-size: 22px;
+  color: #a57c3f;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.item-info {
+  max-width: 70%;
+}
+.item-name {
+  font-weight: bold;
+  color: #333;
+}
+.item-desc {
+  font-size: 14px;
+  color: #666;
+}
+.item-price {
+  font-weight: bold;
+  color: #a57c3f;
+  font-size: 16px;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .menu-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-image {
+    margin-top: 20px;
+  }
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .item-price {
+    margin-top: 5px;
+  }
+  .item-info {
+    max-width: 100%;
+  }
+  .menu-title h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .menu-title p {
+    text-align: center;
+  }
+
+  .menu-card {
+    height: 100%;
+  }
+}
+
+/* Animation for image in the homepage*/
+
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  50% {
+    opacity: 0.3;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Fade animation from the home page" */
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-content,
+  .left-content {
+    padding: 0 9% 0 9%;
+  }
+
+  .image-content {
+    height: 250px;
+    width: 250px;
+  }
+
+  .background-image {
+    display: none;
+  }
+
+  .about-content {
+    height: 100%;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .about-page {
+    height: 100%;
+  }
+}
